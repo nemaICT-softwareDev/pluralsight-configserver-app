@@ -1,0 +1,24 @@
+server:
+    port: 8888
+encrypt: 
+    key: ABCDEFGHIJLMNOPQRSTUVXZ    
+spring:
+    security:
+        user:
+            name: nema
+            password: 123
+    cloud:
+        config: 
+            server:
+                encrypt:
+                    enabled: false
+                git:
+                  uri:  https://github.com/nemaICT-softwareDev/pluralsight-configserver
+                  search-paths: 
+                  - station*
+                  repos:
+                    performance:
+                        pattern: '*/performance'
+                        uri: https://github.com/nemaICT-softwareDev/pluralsight-cloudconfig-performance-env
+                        search-paths:
+                        - station*
